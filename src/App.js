@@ -41,7 +41,12 @@ function TextExpander({
   className,
   children,
 }) {
-  <div>TODO</div>;
+  return (
+    <div className={className}>
+      <span>{children}</span>
+      <button></button>
+    </div>
+  );
 }
 
 export default App;
