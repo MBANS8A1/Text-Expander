@@ -44,9 +44,10 @@ function TextExpander({
   children,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const displayText = isExpanded ? children : "dummy text";
   return (
     <div className={className}>
-      <span>{children}</span>
+      <span>{displayText}</span>
       <button>{expandButtonText}</button>
     </div>
   );
