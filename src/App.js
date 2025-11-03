@@ -32,7 +32,14 @@ function App() {
   );
 }
 
-function TextExpander() {
+function TextExpander({
+  collapsedNumWords,
+  expandButtonText,
+  collapseButtonText,
+  buttonColor,
+  expanded,
+  className,
+}) {
   <div>TODO</div>;
 }
 
