@@ -39,6 +39,7 @@ function TextExpander({
   buttonColor,
   expanded,
   className,
+  children,
 }) {
   <div>TODO</div>;
 }
