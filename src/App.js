@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function App() {
   return (
     <div className="App">
@@ -41,6 +43,7 @@ function TextExpander({
   className,
   children,
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div className={className}>
       <span>{children}</span>
