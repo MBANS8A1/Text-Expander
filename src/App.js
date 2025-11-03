@@ -34,7 +34,7 @@ function App() {
 
 function TextExpander({
   collapsedNumWords,
-  expandButtonText,
+  expandButtonText = "Show more",
   collapseButtonText,
   buttonColor,
   expanded,
@@ -44,7 +44,7 @@ function TextExpander({
   return (
     <div className={className}>
       <span>{children}</span>
-      <button></button>
+      <button>{expandButtonText}</button>
     </div>
   );
 }
