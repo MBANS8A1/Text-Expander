@@ -35,7 +35,7 @@ function App() {
 }
 
 function TextExpander({
-  collapsedNumWords,
+  collapsedNumWords = 10,
   expandButtonText = "Show more",
   collapseButtonText = "Show less",
   buttonColor,
@@ -44,7 +44,12 @@ function TextExpander({
   children,
 }) {
   const [isExpanded, setIsExpanded] = useState(expanded);
-  const displayText = isExpanded ? children : "dummy text";
+  const displayText = isExpanded
+    ? children
+    : children
+        .split(" ", collapsedNumWords)
+        .slice(0, collapsedNumWords)
+        .join(" ") + "...";
   return (
     <div className={className}>
       <span>{displayText}</span>
