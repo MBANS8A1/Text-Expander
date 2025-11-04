@@ -39,11 +39,11 @@ function TextExpander({
   expandButtonText = "Show more",
   collapseButtonText,
   buttonColor,
-  expanded,
+  expanded = false,
   className,
   children,
 }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(expanded);
   const displayText = isExpanded ? children : "dummy text";
   return (
     <div className={className}>
