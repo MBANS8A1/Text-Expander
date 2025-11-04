@@ -37,7 +37,7 @@ function App() {
 function TextExpander({
   collapsedNumWords,
   expandButtonText = "Show more",
-  collapseButtonText,
+  collapseButtonText = "Show less",
   buttonColor,
   expanded = false,
   className,
